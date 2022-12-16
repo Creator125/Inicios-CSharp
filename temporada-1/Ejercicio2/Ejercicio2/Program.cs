@@ -12,11 +12,20 @@ namespace Ejercicio2
     {
         static void Main(string[] args)
         {
-            int num1,num2,suma;
+            string valor1, valor2;
 
-            Console.WriteLine("Ingrese un numero");
-            num1 = Console.ReadLine();
-            
+            Console.WriteLine("Ingrese el primer numero");
+            valor1 = Console.ReadLine();
+            Console.WriteLine("Ingrese el segundo numero");
+            valor2 = Console.ReadLine();
+
+            //Convirtiendo los valores a entero para sumarlos
+            int num1 = Int32.Parse(valor1);
+            int num2 = Int32.Parse(valor2);
+            int suma = num1 + num2;
+
+            Console.WriteLine("Suma de los valores ingresados: "+ suma);
+            Console.Read();
         }
     }
 }
