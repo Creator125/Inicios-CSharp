@@ -1,12 +1,7 @@
-﻿/*
- * Tema: Toma de desiciones
- * 
- * Crear un progama en donde el usuario ingresa una temperatua y de acuerdo
- * a ella se le de una recomendacion de que clase de ropa a usar
-*/
+﻿//Tema: If y else con Tryparse
 using System;
 
-namespace Ejercicio4
+namespace Tryparse
 {
     internal class Program
     {
@@ -14,17 +9,30 @@ namespace Ejercicio4
         {
             Console.WriteLine("Ingrese una temperatura");
             string valor = Console.ReadLine();
-            int temperatura = Int32.Parse(valor);
+            int temperatura;
+
+            int numero;
+
+            if (int.TryParse(valor, out numero))
+            {
+                temperatura = numero;
+            }
+            else
+            {
+                temperatura = 0;
+
+                Console.WriteLine("El valor ingresado no es valido, por favor vuelva a intentarlo con un valor numerico");
+            }
 
             if (temperatura < 20)
             {
                 Console.WriteLine("Abrigate");
             }
-            if (temperatura == 20)
+            else if (temperatura == 20)
             {
                 Console.WriteLine("Vistete comodo");
             }
-            if (temperatura > 20)
+            else
             {
                 Console.WriteLine("Use ropa bien liviana");
             }
