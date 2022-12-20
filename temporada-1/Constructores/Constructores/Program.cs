@@ -7,17 +7,17 @@ namespace Constructores
     {
         static void Main(string[] args)
         {
-            //Primera instacia
-            Humano persona1 = new Humano();
-            persona1.primerNombre = "Obed";
-            persona1.apellido = "Cordoba";
+            Humano persona1 = new Humano("Obed", "Cordoba", "Negros", 21);
             persona1.presentarme();
 
-            //Segunda instacia
-            Humano persona2 = new Humano();
-            persona2.primerNombre = "Viviana";
-            persona2.apellido = "Palacios";
+            Humano persona2 = new Humano("Valentina", "Palacios", "Cafe", 20);
             persona2.presentarme();
+
+            Humano persona3 = new Humano("Carlos", "Garcia", "Azules", 17);
+            persona3.presentarme();
+
+            Humano persona4 = new Humano("Jorge", "Ortega", "Vedes", 1);
+            persona4.presentarme();
 
             Console.Read();
         }
