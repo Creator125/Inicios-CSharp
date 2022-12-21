@@ -32,19 +32,39 @@ namespace MultiplesConstructores
             this.colorOjos = colorOjos;
         }
 
+        //Contructor sin apellido
+        public Humano(string PrimerNombre, string colorOjos, int edad)
+        {
+            this.primerNombre = PrimerNombre;
+            this.colorOjos = colorOjos;
+            this.edad = edad;
+        }
+
+        //Contructor sin apellido y color de ojos
+        public Humano(string PrimerNombre, int edad)
+        {
+            this.primerNombre = PrimerNombre;
+            this.edad = edad;
+        }
+
         //Miembro Metodo
         public void presentarme()
         {
-            if (edad != 0)
-            {
+            if (edad != 0 && apellido != null && colorOjos != null){
                 Console.WriteLine("Hola, soy " + primerNombre + " "
                                 + apellido + ", tengo ojos " + colorOjos + " y tengo " + edad
-                                + " año");
+                                + " años");
             }
-            else
+            else if (apellido == null && colorOjos == null)
             {
+                Console.WriteLine("Hola, soy " + primerNombre + " y tengo " + edad + " años");
+            }
+            else if (apellido == null){
+                Console.WriteLine("Hola, soy " + primerNombre + ", tengo ojos " + colorOjos + " y tengo " + edad
+                                + " años");
+            }else{
                 Console.WriteLine("Hola, soy " + primerNombre + " "
-                                + apellido + ", tengo ojos " + colorOjos);
+                                + apellido + "y tengo ojos " + colorOjos);
             }
         }
 
