@@ -1,18 +1,26 @@
-﻿//Tema: Constantes
+﻿//Constantes
 using System;
 
 namespace Constantes
 {
-    internal class Program
-    {
-        const double PI = 3.14;
-        const int Numfavorito = 10;
-        const string propietario = "Creator125";
-
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Esto lo escribió {0}",propietario);
-            Console.ReadLine();
-        }
-    }
+	class Program
+	{
+		public static void Main(string[] args)
+		{
+			
+			double edad = 20;
+			
+			const string nombre = "Creator125";
+			
+			/*
+			 Valor que no se puede cambiar por constante
+			nombre = "Yecote";
+			
+			*/
+			
+			Console.WriteLine("Tu nombre es: "+ nombre + " y tu edad es "+ edad);
+			
+			Console.ReadKey(true);
+		}
+	}
 }
